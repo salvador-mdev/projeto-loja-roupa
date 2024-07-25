@@ -1,5 +1,247 @@
 .hero {
+    display: grid;
+    grid-template-areas: "slider banner4" "slider banner5";
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 200px 200px;
+    grid-gap: 30px;
+    padding: 30px 15px;
     width: 100%;
-    height: 1000px;
-    background-color: bisque;
+    height: 100%;
+}
+
+.hero .container {
+    grid-area: slider;
+}
+
+.banner4 {
+    grid-area: banner4;
+    background: url(../images/offer-1.jpg) no-repeat center;
+    background-size: cover;
+    max-width: 100%;
+    height: 100%;
+}
+
+.banner5 {
+    grid-area: banner5;
+    background: url(../images/offer-2.jpg) no-repeat center;
+    background-size: cover;
+    max-width: 100%;
+    height: 100%;
+}
+
+.hero .container {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.hero .container  input[type=radio] {
+    display: none;
+}
+
+.hero .container  label {
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.hero .container .slider {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .container .slider h1 {
+    font-size: 56px;
+    font-weight: 500;
+    padding-bottom: 40px;
+    z-index: 5;
+}
+
+.hero .container .slider p {
+    font-size: 15px;
+    padding-top: 20px;
+    line-height: 20px;
+    max-width: 400px;
+    height: 100px;
+    z-index: 5;
+}
+
+.hero .container .slider a {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    padding: 20px 20px;
+    color: #fff;
+    border: 1px #fff solid;
+    transition: 0.3s ease-in-out;
+    z-index: 5;
+}
+
+.hero .container .slider a:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px #000 solid;
+}
+
+.hero .fluxo-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero .fluxo-slider:before  {
+    content: '';
+    background-color: #000;
+    width: 100%;
+    height: 430px;
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    right: 0;
+}
+
+#slide1:checked ~ .slider .banners {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .slider .banners {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ .slider .banners {
+    margin-left: -200%;
+}
+
+.hero .container .slider .banners {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 430px;
+}
+
+.hero .container .slider .banner1,
+.hero .container .slider .banner2,
+.hero .container .slider .banner3 {
+    width: 25%;
+    float:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+.hero .container .slider .banner1 {
+    background: url(../images/carousel-1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.hero .container .slider .banner2 {
+    background: url(../images/carousel-2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.hero .container .slider .banner3 {
+    background: url(../images/carousel-3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#bullets {
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    margin-top: 40px;
+}
+
+#bullets label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10%;
+    border: #fff 1px solid;
+    background: transparent;
+    margin: 0 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+    background: #fff;
+    width: 40px;
+}
+
+.hero .banner4, .hero .banner5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .banner4 h5, .hero .banner5 h5 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+}
+
+.hero .banner4 h2, .hero .banner5 h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero .banner4 a, .hero .banner5 a {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 20px;
+    padding: 7px 7px;
+    color: #000000d7;
+    background-color: var(--cor-primaria);
+    transition: 0.3s ease-in-out;
+}
+
+.hero .banner4 a:hover, .hero .banner5 a:hover {
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+@media (max-width: 815px) {
+    .hero {
+        grid-template-areas: "slider" "banner4" "banner5";
+        grid-template-columns: 1fr;
+        grid-template-rows: 430px 300px 300px;
+        grid-gap: 20px; 
+    }
+}
+
+@media (max-width: 360px) {
+    .hero .container .slider h1 {
+        font-size: 40px;
+    }
+
+    .hero .container .slider p {
+        font-size: 13px;
+    }
 }

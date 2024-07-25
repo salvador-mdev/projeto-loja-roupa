@@ -140,6 +140,7 @@
 .header .container2 .menu-completo .submenu1>ul {
     width: 222px;
     background-color: #fff;
+    z-index: 10;
 }
 
 .header .container2 .menu-completo .submenu1>ul>li {
