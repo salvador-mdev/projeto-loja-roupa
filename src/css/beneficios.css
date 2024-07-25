@@ -1,0 +1,81 @@
+.beneficios {
+    display: grid;
+    grid-template-areas: "qualidade frete-gratis garantia suporte";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-gap: 30px;
+    padding: 40px;
+}
+
+.beneficios .qualidade {
+    grid-area: qualidade;
+}
+
+.beneficios .frete-gratis {
+    grid-area: frete-gratis;
+}
+
+.beneficios .garantia {
+    grid-area: garantia;
+}
+
+.beneficios .suporte {
+    grid-area: suporte;
+}
+
+.beneficios .qualidade,
+.beneficios .frete-gratis,
+.beneficios .garantia,
+.beneficios .suporte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    max-width: 600px;
+    height: 100px;
+    padding: 0 35px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.beneficios .qualidade h2,
+.beneficios .frete-gratis h2,
+.beneficios .garantia h2,
+.beneficios .suporte h2 {
+    font-size: 20px;
+    color: #3d464d;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.beneficios .garantia .flechas {
+    display: flex;
+    flex-direction: column;
+}
+
+.beneficios .garantia .flechas i:first-child {
+    height: 14px;
+}
+
+.beneficios .qualidade i,
+.beneficios .frete-gratis i,
+.beneficios .garantia i,
+.beneficios .suporte i {
+    font-size: 40px;
+    color: var(--cor-primaria);
+}
+
+@media (max-width: 1000px) {
+    .beneficios {
+        grid-template-areas: "qualidade frete-gratis" "garantia suporte";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .beneficios {
+        grid-template-areas: "qualidade" "frete-gratis" "garantia" "suporte";
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        padding: 20px;
+    }
+}

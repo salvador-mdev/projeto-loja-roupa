@@ -1,0 +1,222 @@
+.categories .grid {
+    display: grid;
+    grid-template-areas: "item1 item2 item3 item4" "item5 item6 item7 item8" "item9 item10 item11 item12";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 30px;
+    padding: 0 40px 30px 40px;
+}
+
+.categories .item1 {
+    grid-area: item1;
+}
+
+.categories .item2 {
+    grid-area: item2;
+}
+
+.categories .item3 {
+    grid-area: item3;
+}
+
+.categories .item4 {
+    grid-area: item4;
+}
+
+.categories .item5 {
+    grid-area: item5;
+}
+
+.categories .item6 {
+    grid-area: item6;
+}
+
+.categories .item7 {
+    grid-area: item7;
+}
+
+.categories .item8 {
+    grid-area: item8;
+}
+
+.categories .item9 {
+    grid-area: item9;
+}
+
+.categories .item10 {
+    grid-area: item10;
+}
+
+.categories .item11 {
+    grid-area: item11;
+}
+
+.categories .item12 {
+    grid-area: item12;
+}
+
+.categories h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3d464d;
+    padding: 40px;
+}
+
+.categories .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.categories .info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #3d464d;
+    padding-bottom: 8px;
+}
+
+.categories .info p {
+    align-self: flex-start;
+    color: #6c757d;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.categories .item1,
+.categories .item2,
+.categories .item3,
+.categories .item4,
+.categories .item5,
+.categories .item6,
+.categories .item7,
+.categories .item8,
+.categories .item9,
+.categories .item10,
+.categories .item11,
+.categories .item12 {
+    display: flex;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.categories .item1:hover,
+.categories .item2:hover,
+.categories .item3:hover,
+.categories .item4:hover,
+.categories .item5:hover,
+.categories .item6:hover,
+.categories .item7:hover,
+.categories .item8:hover,
+.categories .item9:hover,
+.categories .item10:hover,
+.categories .item11:hover,
+.categories .item12:hover {
+    background-color: var(--cor-primaria);
+}
+
+.categories .item1 .img,
+.categories .item2 .img,
+.categories .item3 .img,
+.categories .item4 .img,
+.categories .item5 .img,
+.categories .item6 .img,
+.categories .item7 .img,
+.categories .item8 .img,
+.categories .item9 .img,
+.categories .item10 .img,
+.categories .item11 .img,
+.categories .item12 .img {
+    position: relative;
+}
+
+.img::after {
+    background-color: #000;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.img::before {
+    content: '';
+    background: url(../images/shopping-cart-solid.svg) no-repeat center;
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    opacity: 0;
+    right: 40%;
+    top: 40%;
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.categories .item1:hover .img::after,
+.categories .item2:hover .img::after,
+.categories .item3:hover .img::after,
+.categories .item4:hover .img::after,
+.categories .item5:hover .img::after,
+.categories .item6:hover .img::after,
+.categories .item7:hover .img::after,
+.categories .item8:hover .img::after,
+.categories .item9:hover .img::after,
+.categories .item10:hover .img::after,
+.categories .item11:hover .img::after,
+.categories .item12:hover .img::after {
+    opacity: 0.2;
+}
+
+.categories .item1:hover .img::before,
+.categories .item2:hover .img::before,
+.categories .item3:hover .img::before,
+.categories .item4:hover .img::before,
+.categories .item5:hover .img::before,
+.categories .item6:hover .img::before,
+.categories .item7:hover .img::before,
+.categories .item8:hover .img::before,
+.categories .item9:hover .img::before,
+.categories .item10:hover .img::before,
+.categories .item11:hover .img::before,
+.categories .item12:hover .img::before {
+    opacity: 1;
+}
+
+@media (max-width:1200px) {
+    .categories .grid {
+        grid-template-areas: "item1 item2 item3" "item4 item5 item6" "item7 item8 item9" "item10 item11 item12";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 100px)
+    }
+}
+
+@media (max-width:850px) {
+    .categories .grid {
+        grid-template-areas: "item1 item2" "item3 item4" "item5 item6" "item7 item8" "item9 item10" "item11 item12";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 100px);
+    }
+}
+
+@media (max-width:600px) {
+    .categories .grid {
+        grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6" "item7" "item8" "item9" "item10" "item11" "item12";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 100px);
+        grid-gap: 15px;
+        padding: 0 20px 20px 20px;     
+    }
+
+    .categories h2 {
+        padding: 20px;
+        font-size: 25px;
+        text-align: center;
+    }
+}
