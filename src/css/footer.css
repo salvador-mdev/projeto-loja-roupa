@@ -207,7 +207,7 @@
     }
 
     .footer .container-footer {
-        grid-template-rows: 300px 200px 1fr 150px;
+        grid-template-rows: 250px 200px 1fr 150px;
     }
 
     .footer .contato {
