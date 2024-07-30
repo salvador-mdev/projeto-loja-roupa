@@ -1,0 +1,229 @@
+.footer .container-footer {
+    display: grid;
+    grid-template-areas: "footer-menu contact about contato";
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #f3f3f3;
+    max-width: 100%;
+    padding: 60px 30px 35px 30px;
+    background-color: #222222;
+}
+
+.footer .container-footer .contact {
+    padding: 0 30px;
+    grid-area: contact;
+}
+
+.footer .container-footer .footer-menu {
+    text-align: center;
+    grid-area: footer-menu;
+}
+
+.footer .container-footer .about {
+    grid-area: about;
+}
+
+.footer .container-footer .contato {
+    grid-area: contato;
+}
+
+.footer .container-footer .footer-menu ul li {
+    padding-bottom: 10px;
+}
+
+.footer .container-footer .footer-menu ul li a {
+    font-size: 18px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.footer .container-footer .footer-menu ul li a:hover {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.footer .container-footer h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--cor-primaria);
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer .about p {
+    padding-right: 30px;
+    text-align: start;
+    color: #fff;
+}
+
+.footer .container-footer .contact ul li {
+    padding-bottom: 10px;
+}
+
+.footer .container-footer .contact ul li a {
+    font-size: 18px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.footer .container-footer .contact ul li a:hover {
+    color: var(--cor-primaria);
+    font-weight: 300;
+}
+
+.footer .container-footer .contact .fas.fa-map-marker-alt,
+.footer .container-footer .contact .fas.fa-phone-alt,
+.footer .container-footer .contact .fas.fa-envelope {
+    padding-right: 10px;
+}
+
+.footer .contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .contato .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .contato h2 {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.footer .contato p {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.footer .contato .input-text {
+    margin: 10px 0;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.footer .contato .btn {
+    background-color: var(--cor-primaria);
+    color: #000;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: block;
+    cursor: pointer;
+}
+
+.footer .contato .btn:hover {
+    transform: scale(1.15);
+}
+
+.footer .direitos-autorais {
+    background-color: #222222;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+@media (max-width: 1010px) {
+    .footer .container-footer {
+        grid-template-areas: "footer-menu contato" "about contact";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 150px;
+        grid-gap: 15px;
+    }
+
+    .footer .container-footer .contact ul {
+        padding: 0 0 0 12%;
+    }
+
+    .footer .container-footer h2 {
+        text-align: center;
+    }
+
+    .footer .container-footer .about {
+        padding: 0 30px;
+        text-align: center;
+    }
+    
+    .footer .about p {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .footer .contato {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer .container-footer {
+        grid-template-rows: 1fr 200px;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer .container-footer {
+        grid-template-areas: "footer-menu" "about" "contato" "contact";
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 150px 1fr 150px;
+    }
+
+    .footer .container-footer .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer .container-footer {
+        padding: 40px 30px;
+    }
+
+    .footer .container-footer {
+        grid-template-rows: 300px 200px 1fr 150px;
+    }
+
+    .footer .contato {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer .container-footer {
+        padding: 30px 15px;
+    }
+
+    .footer .contato .btn {
+        margin-bottom: 20px;
+    }
+}
