@@ -1,0 +1,419 @@
+.products2 .grid {
+    display: grid;
+    grid-template-areas: "product-1 product-2 product-3 product-4" "product-5 product-6 product-7 product-8";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 380px 380px;
+    grid-gap: 30px;
+    padding: 40px;
+    position: relative;
+}
+
+.products2 .grid .product-1 {
+    grid-area: product-1;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 .grid .product-2 {
+    grid-area: product-2;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 .grid .product-3 {
+    grid-area: product-3;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 .grid .product-4 {
+    grid-area: product-4;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 .grid .product-5 {
+    grid-area: product-5;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 .grid .product-6 {
+    grid-area: product-6;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 .grid .product-7 {
+    grid-area: product-7;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 .grid .product-8 {
+    grid-area: product-8;
+    text-align: center;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.products2 > h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3d464d;
+    padding: 20px 0 0 40px;
+}
+
+.products2 .grid h3 {
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3d464d;
+}
+
+.products2 .grid h4 {
+    padding: 13px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3d464d;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.products2 .grid .precio {
+    display: flex;
+    justify-content: center;
+}
+
+.products2 .grid .precio h3:last-child {
+    font-size: 13px;
+    text-decoration: line-through;
+    padding-left: 8px;
+}
+
+.products2 .grid .stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products2 .grid .stars i {
+    color: var(--cor-primaria);
+}
+
+.products2 .grid .stars p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #6c757d;
+    padding-left: 8px;
+}
+
+.products2 .grid .icones i {
+    font-size: 16px;
+    color: #444;
+    padding: 7px;
+    border: 1px #444 solid;
+    z-index: 11;
+}
+
+.products2 .grid .icones i:hover {
+    color: #000;
+    background-color: var(--cor-primaria);
+    z-index: 11;
+}
+
+.icones {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 40%;
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+    z-index: 2;
+}
+
+.products2 .grid .product-1:hover .icones,
+.products2 .grid .product-2:hover .icones,
+.products2 .grid .product-3:hover .icones,
+.products2 .grid .product-4:hover .icones,
+.products2 .grid .product-5:hover .icones,
+.products2 .grid .product-6:hover .icones,
+.products2 .grid .product-7:hover .icones,
+.products2 .grid .product-8:hover .icones {
+    bottom: 55%;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.products2 .grid .efeito-zoom .img1 {
+    background: url(../images/product-1.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img2 {
+    background: url(../images/product-2.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img3 {
+    background: url(../images/product-3.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img4 {
+    background: url(../images/product-4.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img5 {
+    background: url(../images/product-5.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img6 {
+    background: url(../images/product-6.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img7 {
+    background: url(../images/product-7.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img8 {
+    background: url(../images/product-8.jpg) no-repeat center;
+    background-size: cover;
+    width: 1fr;
+    height: 250px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.products2 .grid .efeito-zoom .img1::before,
+.products2 .grid .efeito-zoom .img2::before,
+.products2 .grid .efeito-zoom .img3::before,
+.products2 .grid .efeito-zoom .img4::before,
+.products2 .grid .efeito-zoom .img5::before,
+.products2 .grid .efeito-zoom .img6::before,
+.products2 .grid .efeito-zoom .img7::before,
+.products2 .grid .efeito-zoom .img8::before {
+    content: "";
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    z-index: 10;
+}
+
+.products2 .grid .efeito-zoom .img1:hover::before,
+.products2 .grid .efeito-zoom .img2:hover::before,
+.products2 .grid .efeito-zoom .img3:hover::before,
+.products2 .grid .efeito-zoom .img4:hover::before,
+.products2 .grid .efeito-zoom .img5:hover::before,
+.products2 .grid .efeito-zoom .img6:hover::before,
+.products2 .grid .efeito-zoom .img7:hover::before,
+.products2 .grid .efeito-zoom .img8:hover::before {
+    opacity: 0.4;
+}
+
+.products2 .grid .efeito-zoom:hover .img1,
+.products2 .grid .efeito-zoom:hover .img2,
+.products2 .grid .efeito-zoom:hover .img3,
+.products2 .grid .efeito-zoom:hover .img4,
+.products2 .grid .efeito-zoom:hover .img5,
+.products2 .grid .efeito-zoom:hover .img6,
+.products2 .grid .efeito-zoom:hover .img7,
+.products2 .grid .efeito-zoom:hover .img8 {
+    transform: scale(1.1);
+}
+
+.products2 .grid .sombra {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1500px) {
+    .products2 .grid {
+        grid-template-rows: 550px 550px;
+    }
+
+    .products2 .grid .efeito-zoom .img1,
+    .products2 .grid .efeito-zoom .img2,
+    .products2 .grid .efeito-zoom .img3,
+    .products2 .grid .efeito-zoom .img4,
+    .products2 .grid .efeito-zoom .img5,
+    .products2 .grid .efeito-zoom .img6,
+    .products2 .grid .efeito-zoom .img7,
+    .products2 .grid .efeito-zoom .img8 {
+        height: 400px;
+    }
+
+    .products2 .grid h3 {
+        font-size: 30px;
+    }
+    
+    .products2 .grid h4 {
+        font-size: 26px;
+    }
+
+    .products2 .grid .icones i {
+        font-size: 25px;
+    }
+
+    .products2 .grid .stars p {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .products2 .grid {
+        grid-template-rows: 650px 650px;
+    }
+    
+    .products2 .grid h3 {
+        font-size: 32px;
+    }
+    
+    .products2 .grid h4 {
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    .products2 .grid .icones i {
+        font-size: 32px;
+    }
+
+    .products2 .grid .stars p {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .products2 .grid {
+        grid-template-rows: 350px 350px;
+    }
+
+    .products2 .grid h3 {
+        font-size: 14px;
+    }
+    
+    .products2 .grid h4 {
+        font-size: 14px;
+        padding: 13px 0;
+    }
+
+    .products2 .grid .icones i {
+        font-size: 14px;
+    }
+
+    .products2 .grid .stars p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 850px) {
+    .products2 .grid {
+        grid-template-areas: "product-1 product-2 product-3" "product-4 product-5 product-6" "product-7 product-8 .";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 380px 380px 380px;
+        grid-gap: 20px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .products2 .grid {
+        grid-template-areas: "product-1 product-2" "product-3 product-4" "product-5 product-6" "product-7 product-8";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 380px 380px 380px 380px;
+        grid-gap: 20px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .products2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .products2 .grid {
+        grid-template-areas: "product-1" "product-2" "product-3" "product-4" "product-5" "product-6" "product-7" "product-8";
+        grid-template-columns: 250px;
+        grid-template-rows: 400px 400px 400px 400px 400px 400px 400px 400px;
+        grid-gap: 20px;
+        padding: 20px;
+    }
+
+    .products2 .grid .efeito-zoom .img1,
+    .products2 .grid .efeito-zoom .img2,
+    .products2 .grid .efeito-zoom .img3,
+    .products2 .grid .efeito-zoom .img4,
+    .products2 .grid .efeito-zoom .img5,
+    .products2 .grid .efeito-zoom .img6,
+    .products2 .grid .efeito-zoom .img7,
+    .products2 .grid .efeito-zoom .img8 {
+        height: 280px;
+    }
+
+    .products2 > h2 {
+        font-size: 25px;
+        padding: 20px 0 0 0;
+    }
+}
