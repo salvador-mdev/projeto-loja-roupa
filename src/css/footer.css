@@ -220,10 +220,21 @@
 
 @media (max-width: 400px) {
     .footer .container-footer {
+        grid-template-rows: 250px 220px 1fr 150px;
         padding: 30px 15px;
+        justify-content: center;
     }
 
     .footer .contato .btn {
         margin-bottom: 20px;
+    }
+
+    .footer .contato .input-text {
+        margin: 10px 0;
+        padding: 15px 15px;
+    }
+
+    .footer .container-footer .contact ul {
+        padding: 0 0 0 8%;
     }
 }
